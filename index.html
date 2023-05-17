@@ -9,18 +9,18 @@
   <title>Weather</title>
 </head>
 <body>
-  <header class="container-fluid bg-dark text-white">
-    <div class="row justify-content-center">
+  <header class="container-fluid">
+    <div class="row justify-content-center text-white">
       <h1>Weather Dashboard</h1>
     </div>
   </header>
 
   <div class="container-fluid">
     <div class="row">
-      <div id="city-list" class="col-md-3 bg-light">
+      <div id="city-list" class="col-md-3">
         <h4 class="mt-3">Search for a City:</h4>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="City Name" aria-label="city name" aria-describedby="basic-addon2">
+        <div class="input-group mb-2">
+          <input type="text" class="form-control" placeholder="City Name">
           <div class="input-group-append">
             <button class="btn btn-outline-secondary" id="city-search" type="button"><i class="fas fa-search"></i></button>
           </div>
@@ -39,65 +39,59 @@
             <tr class="border" id="row8"></tr>
             <tr class="border" id="row9"></tr>        
         </table>
-              
       </div>
 
       <div class="col-md-9">
-        <!--<div class="row">-->
-        <div class="card col-md-12 mt-3 mb-3">
-            <!--<h3 id="city-name" class="mt-2">City Name<img id="weather-icon" height="auto" width="auto"></h3>-->
-          <div id="forecast" class="card-body pl-0 pr-0">
+        <div class="card col-md- mt-4 mb-4">
+          <div id="forecast" class="card-body pl-1 pr-1">
             <div class="row">
-              <div id="city-name" class="col-md-auto h3 navbar-text ">City Name</div>
+              <div id="city-name" class="col-md-auto h4 navbar-text">City Name</div>
               <div class="col-md-2"><img id="weather-icon" height="auto" width="auto"></div>
             </div>
-            <span id="temp-data"></span><br>
-            <span id="hum-data"></span><br>
+            <span id="temperature-data"></span><br>
+            <span id="humidity-data"></span><br>
             <span id="wind-data"></span><br>
-            <span id="uvi-data"></span><br>
+            <span id="uvindex-data"></span><br>
           </div>
-
         </div>
 
-        <div class="row">
-          
-        </div>
+        <!-- <div class="row">
+        </div> -->
 
         <div id="five-day-title" class="row">
           <h3 class="ml-3">5-Day Forecast</h3>
         </div>
 
         <div id="five-day-cards" class="row">
-
-        <div class="col-md-2dot4">
-        <div id="five-day-1" class="card bg-primary text-white mb-1">
-          <div class="card-body">
-            <h6></h6>
-            <img class="weather-icon" height="auto" width="auto">
-              <p class="temp-5 small"></p>
-              <p class="hum-5 small"></p>
+          <div class="col-md">
+            <div id="five-day-1" class="card bg-primary text-white mb-1">
+              <div class="card-body">
+                <h6></h6>
+                  <img class="weather-icon" height="auto" width="auto">
+                    <p class="temp-5 small"></p>
+                    <p class="hum-5 small"></p>
+              </div>
           </div>
         </div>
-        </div>
 
         <div class="col-md-2dot4">
-        <div id="five-day-2" class="card bg-primary text-white mb-1">
-          <div class="card-body">
-            <h6></h6>
-            <img class="weather-icon" height="auto" width="auto">
-            <p class="temp-5 small"></p>
-            <p class="hum-5 small"></p>
+          <div id="five-day-2" class="card bg-primary text-white mb-1">
+            <div class="card-body">
+              <h6></h6>
+                  <img class="weather-icon" height="auto" width="auto">
+                    <p class="temp-5 small"></p>
+                    <p class="hum-5 small"></p>
+            </div>
           </div>
-        </div>
         </div>
 
         <div class="col-md-2dot4">
           <div id="five-day-3" class="card bg-primary text-white mb-1">
             <div class="card-body">
               <h6></h6>
-              <img class="weather-icon" height="auto" width="auto">
-              <p class="temp-5 small"></p>
-              <p class="hum-5 small"></p>
+                <img class="weather-icon" height="auto" width="auto">
+                  <p class="temp-5 small"></p>
+                  <p class="hum-5 small"></p>
             </div>
           </div>
         </div>
@@ -106,9 +100,9 @@
           <div id="five-day-4" class="card bg-primary text-white mb-1">
             <div class="card-body">
               <h6></h6>
-              <img class="weather-icon" height="auto" width="auto">
-              <p class="temp-5 small"></p>
-              <p class="hum-5 small"></p>
+                <img class="weather-icon" height="auto" width="auto">
+                  <p class="temp-5 small"></p>
+                  <p class="hum-5 small"></p>
             </div>
           </div>
         </div>
@@ -117,26 +111,20 @@
           <div id="five-day-5" class="card bg-primary text-white mb-1">
             <div class="card-body">
               <h6></h6>
-              <img class="weather-icon" height="auto" width="auto">
-              <p class="temp-5 small"></p>
-              <p class="hum-5 small"></p>
+                <img class="weather-icon" height="auto" width="auto">
+                  <p class="temp-5 small"></p>
+                  <p class="hum-5 small"></p>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 
-
-  
-
-  <footer></footer>
-  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
   <script src="https://kit.fontawesome.com/f53a07ee43.js" crossorigin="anonymous"></script>
   <script src='./app/config.js'></script>
-  <script src=".app/script.js"></script>
+  <script src="./app/script.js"></script>
 </body>
 </html>
